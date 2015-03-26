@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'fileutils'
+require 'tempfile'
+require 'josephine'
+puts Josephine.new.count_lines(ARGV[0])
+
