@@ -1,6 +1,7 @@
 # Josephine
 
-	This gem counts the number of lines of code in your project directory and counts the number of comment lines.
+This gem counts the number of lines of code in your project directory and counts the number of comment lines.
+
 ## Installation
 
  `gem install josephine`
