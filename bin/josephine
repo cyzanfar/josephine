@@ -2,5 +2,5 @@
 require 'fileutils'
 require 'tempfile'
 require 'josephine'
-puts Josephine.new.count_lines(ARGV[0])
+puts Josephine.new.(ARGV[0])
 
