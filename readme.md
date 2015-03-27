@@ -1,6 +1,7 @@
 # Josephine
 
-This gem counts the number of lines of code in your project directory and counts the number of comment lines.
+Ruby gem that calculates number of files, total lines of code, comments, and average LOC per file.
+It also excludes files inside directories with "vendor" in their name.
 
 ## Installation
 
@@ -11,7 +12,12 @@ This gem counts the number of lines of code in your project directory and counts
 ## Usage
 
 In your bash run `josephine '<FILE EXTENSION>'`
-	ex: `josephine '.rb'` => will read all files in your project directory and subdirectory that has the extension `.rb` and return the total number of lines of code along with the number of comment lines.
+
+ex: `josephine '.rb'` => will read all files in your project directory and subdirectory that has the extension `.rb`
+
+##Todo
+
+--Support multitude file extension.
 
 ##Contribute
 
