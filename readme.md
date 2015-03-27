@@ -1,6 +1,6 @@
 # Josephine
 
-Ruby gem that calculates number of files, total lines of code, comments, and average LOC per file.
+Ruby gem that calculates number of files, total lines of code, comments, line spacing and average LOC per file extension.
 It also excludes files inside directories with "vendor" in their name.
 
 ## Installation
