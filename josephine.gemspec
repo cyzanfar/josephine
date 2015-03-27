@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'josephine'
-  s.version     = '0.1.3'
+  s.version     = '0.2.0'
   s.date        = '2015-03-26'
   s.summary     = "I <3 Josephine "
   s.description = "count the number of lines of code in your project files"
