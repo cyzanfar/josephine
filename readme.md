@@ -18,9 +18,12 @@ ex: `josephine '.rb'` => will read all files in your project directory and subdi
 You can also pass in an arbitrary number of file extension such that `josephine '.rb' '.css'` for example, will output the number of files, total lines of code, etc. for those specific extensions.
 
 <strong>Output example</strong>
+
 run:  `josephine '.rb' '.css'`
 
 output:
+
+
 					------------------------------
 					39 files with .rb extension.
 					434 lines of code.
