@@ -1,46 +1,36 @@
 class Josephine
 
-  def initialize(extension)
-    @extension = extension
-    extension_file
-    count_lines
-  end
-
-  def extension_file
-    ext = File.join("**", "*#{@extension}")
-    files = Dir.glob(ext)
-  end
-
-  def count_lines
-    l = 0 # Number of files
-    line_count = 0 # Number of lines of code
-    line_com = 0 # Number of lines of comments
-    space = 0
-    extension_file.each do |f|
+  def count_lines(ext)
+    o = 0 # Number of files
+    n = 0 # Number of lines of code
+    m = 0 # Number of lines of comments
+    # files = Dir.glob('./**/*.' + ext)
+    rubyfile = File.join("**", "*#{ext}")
+    files = Dir.glob(rubyfile)
+    files.each do |f|
       next if f.index('vendor')
       next if FileTest.directory?(f)
-      l += 1
+      o += 1
       i = 0
       lines = []
       File.new(f).each_line do |line|
-        lines << line unless line.strip[0] == nil || line.strip[0] == '#'
-        if line.strip[0].nil?
-          space += 1
+        if line.strip[0] == nil
+          n -= 1
           next
         end
         if line.strip[0] == '#'
-          line_com += 1
+          m += 1
           next
         end
+        lines << line
         i += 1
       end
-      line_count = lines.length
+      n += i
     end
-    puts "#{l.to_s} files."
-    puts "#{line_count.to_s} lines of code."
-    puts "#{(line_count.to_f/l.to_f).round(2)} LOC/file."
-    puts "#{line_com.to_s} lines of comments."
-    puts "#{space.to_s} line spacing."
+    puts "#{o.to_s} files."
+    puts "#{n.to_s} lines of code."
+    puts "#{(n.to_f/o.to_f).round(2)} LOC/file."
+    puts "#{m.to_s} lines of comments."
   end
 
 end
