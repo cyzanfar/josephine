@@ -2,5 +2,7 @@
 require 'fileutils'
 require 'tempfile'
 require 'josephine'
-puts Josephine.new(ARGV[0])
+ARGV.each do |ext|
+	puts Josephine.new(ext)
+end
 

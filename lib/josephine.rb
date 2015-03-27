@@ -12,14 +12,14 @@ class Josephine
   end
 
   def count_lines
-    l = 0 # Number of files
+    num_files = 0 # Number of files
     line_count = 0 # Number of lines of code
     line_com = 0 # Number of lines of comments
     space = 0
     extension_file.each do |f|
       next if f.index('vendor')
       next if FileTest.directory?(f)
-      l += 1
+      num_files += 1
       i = 0
       lines = []
       File.new(f).each_line do |line|
@@ -37,11 +37,15 @@ class Josephine
 
       line_count += i
     end
-    puts "#{l.to_s} files."
+    puts ""
+    puts "------------------------------"
+    puts "#{num_files.to_s} files with #{@extension} extension."
     puts "#{line_count.to_s} lines of code."
-    puts "#{(line_count.to_f/l.to_f).round(2)} LOC/file."
+    puts "#{(line_count.to_f/num_files.to_f).round(2)} LOC/file."
     puts "#{line_com.to_s} lines of comments."
     puts "#{space.to_s} line spacing."
+
   end
+
 
 end
