@@ -44,6 +44,7 @@ class Josephine
     puts "#{(line_count.to_f/num_files.to_f).round(2)} LOC/file."
     puts "#{line_com.to_s} lines of comments."
     puts "#{space.to_s} line spacing."
+     puts "#{(space.to_f / num_files.to_f).round(2)} average line space / file."
 
   end
 

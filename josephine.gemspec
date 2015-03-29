@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'josephine'
-  s.version     = '0.3.0'
-  s.date        = '2015-03-26'
+  s.version     = '0.3.1'
+  s.date        = '2015-03-29'
   s.summary     = "I <3 Josephine "
   s.description = "count the number of lines of code in your project files"
   s.authors     = ["Cyrus Ghazanfar"]
