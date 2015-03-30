@@ -1,3 +1,6 @@
+
+[![Gem Version](https://badge.fury.io/rb/josephine.svg)](http://badge.fury.io/rb/josephine)
+
 # Josephine
 
 Ruby gem that calculates number of files, total lines of code, comments, line spacing and average LOC per file extension.
