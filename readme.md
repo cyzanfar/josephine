@@ -40,9 +40,6 @@ output:
 					0 line spacing.
 					 #<Josephine:0x007fafd3ca3c28>
 
-##Todo
-
---Support multitude file extension.
 
 ##Contribute
 
