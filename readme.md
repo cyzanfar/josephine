@@ -27,21 +27,23 @@ run:  `josephine .rb .css`
 output:
 
 
-					------------------------------
-					39 files with .rb extension.
-					434 lines of code.
-					11.13 LOC/file.
-					198 lines of comments.
-					125 line spacing.
-					 #<Josephine:0x007fafd3dba670>
+				------------------------------
+				53 files with .rb extension.
+				460 lines of code.
+				8.68 LOC/file.
+				226 lines of comments.
+				157 line spacing.
+				2.96 average line space / file.
 
-					------------------------------
-					1 files with .css extension.
-					13 lines of code.
-					13.0 LOC/file.
-					0 lines of comments.
-					0 line spacing.
-					 #<Josephine:0x007fafd3ca3c28>
+
+				------------------------------
+				3 files with .js extension.
+				111 lines of code.
+				37.0 LOC/file.
+				0 lines of comments.
+				21 line spacing.
+				7.0 average line space / file.
+
 
 For all the files in your project directory run `josephine -all`
 
