@@ -7,8 +7,13 @@ class Josephine
   end
 
   def extension_file
-    ext = File.join("**", "*#{@extension}")
-    files = Dir.glob(ext)
+    if @extension == "-all".strip
+      ext = File.join("**", "*")
+      files = Dir.glob(ext)
+    else
+      ext = File.join("**", "*#{@extension}")
+      files = Dir.glob(ext)
+    end
   end
 
   def count_lines
@@ -23,11 +28,11 @@ class Josephine
       i = 0
       lines = []
       File.new(f).each_line do |line|
-        if line.strip[0] == nil
+        if line.scrub.strip[0] == nil
           space += 1
           next
         end
-        if line.strip[0] == '#'
+        if line.scrub.strip[0] == '#'
           line_com += 1
           next
         end
@@ -35,11 +40,16 @@ class Josephine
         i += 1
       end
 
+      # binding.pry
       line_count += i
     end
     puts ""
     puts "------------------------------"
-    puts "#{num_files.to_s} files with #{@extension} extension."
+    if @extension == "-all"
+     puts "#{num_files.to_s} files"
+    else
+     puts "#{num_files.to_s} files with #{@extension} extension."
+    end
     puts "#{line_count.to_s} lines of code."
     puts "#{(line_count.to_f/num_files.to_f).round(2)} LOC/file."
     puts "#{line_com.to_s} lines of comments."
