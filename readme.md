@@ -8,9 +8,17 @@ It also excludes files inside directories with "vendor" in their name.
 
 ## Installation
 
- `gem install josephine`
+Add this line to your aplication's Gemfile
 
- then `bundle install`
+```ruby
+ gem 'josephine'
+```
+
+then execute
+  `$ bundle install`
+
+or install it yourself
+ 	`$ gem install josephine`
 
 ## Usage
 
