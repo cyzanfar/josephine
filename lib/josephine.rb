@@ -42,18 +42,13 @@ class Josephine
   end
 
   def display_stat(num_files, line_count, line_com, space)
-    puts ""
-    puts "------------------------------"
+    puts "\n------------------------------\n"
     if @extension == "-all"
-     puts "#{num_files.to_s} files"
+     puts "#{num_files.to_s} files\n"
     else
-     puts "#{num_files.to_s} files with #{@extension} extension."
+     puts "#{num_files.to_s} files with #{@extension} extension.\n"
     end
-    puts "#{line_count.to_s} lines of code."
-    puts "#{(line_count.to_f/num_files.to_f).round(2)} LOC/file."
-    puts "#{line_com.to_s} lines of comments."
-    puts "#{space.to_s} line spacing."
-     puts "#{(space.to_f / num_files.to_f).round(2)} average line space / file."
+    puts "#{line_count.to_s} lines of code.\n#{(line_count.to_f/num_files.to_f).round(2)} LOC/file.\n#{line_com.to_s} lines of comments.\n#{space.to_s} line spacing.\n#{(space.to_f / num_files.to_f).round(2)} average line space / file.\n"
   end
 
 
