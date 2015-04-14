@@ -1,5 +1,6 @@
 
 [![Gem Version](https://badge.fury.io/rb/josephine.svg)](http://badge.fury.io/rb/josephine)
+<a href="https://codeclimate.com/repos/552c81486956806fd60036a3/feed"><img src="https://codeclimate.com/repos/552c81486956806fd60036a3/badges/d1f5e5b91e9d1ea437d5/gpa.svg" /></a>
 
 # Josephine
 
