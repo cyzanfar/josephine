@@ -17,10 +17,7 @@ class Josephine
   end
 
   def count_lines
-    num_files = 0 # Number of files
-    line_count = 0 # Number of lines of code
-    line_com = 0 # Number of lines of comments
-    space = 0
+    num_files, line_count, line_com, space = 0, 0, 0, 0
     extension_file.each do |f|
       next if f.index('vendor')
       next if FileTest.directory?(f)
@@ -39,10 +36,12 @@ class Josephine
 
         i += 1
       end
-
-      # binding.pry
       line_count += i
     end
+    display_stat(num_files, line_count, line_com, space)
+  end
+
+  def display_stat(num_files, line_count, line_com, space)
     puts ""
     puts "------------------------------"
     if @extension == "-all"
@@ -55,7 +54,6 @@ class Josephine
     puts "#{line_com.to_s} lines of comments."
     puts "#{space.to_s} line spacing."
      puts "#{(space.to_f / num_files.to_f).round(2)} average line space / file."
-
   end
 
 
